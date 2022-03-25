@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../G-ClOUD/G-ClOUD.iml" filepath="$PROJECT_DIR$/../G-ClOUD/G-ClOUD.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../G-Config/G-Config.iml" filepath="$PROJECT_DIR$/../G-Config/G-Config.iml" />
       <module fileurl="file://$PROJECT_DIR$/../G-ESTATE/G-ESTATE.iml" filepath="$PROJECT_DIR$/../G-ESTATE/G-ESTATE.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../G-Parent/G-Parent.iml" filepath="$PROJECT_DIR$/../G-Parent/G-Parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../G-Webflux/G-Webflux.iml" filepath="$PROJECT_DIR$/../G-Webflux/G-Webflux.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../g-parent/G-Parent.iml" filepath="$PROJECT_DIR$/../g-parent/G-Parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/simple.iml" filepath="$PROJECT_DIR$/simple.iml" />
     </modules>
   </component>
