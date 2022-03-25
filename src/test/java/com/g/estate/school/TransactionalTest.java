@@ -1,6 +1,6 @@
 package com.g.estate.school;
 
-import com.g.estate.GEstateApplication;
+import com.g.estate.GSchoolApplication;
 import com.g.estate.entity.Location;
 import com.g.estate.service.LocationService;
 import org.junit.Test;
@@ -17,7 +17,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = GEstateApplication.class)
+@SpringBootTest(classes = GSchoolApplication.class)
 public class TransactionalTest {
 
     @Autowired
