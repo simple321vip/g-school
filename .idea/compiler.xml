@@ -12,12 +12,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="G-ClOUD" target="1.5" />
-      <module name="G-Config" target="1.5" />
-      <module name="G-ESTATE" target="1.5" />
-      <module name="G-Parent" target="1.5" />
-      <module name="G-Webflux" target="1.5" />
-      <module name="simple" target="1.5" />
+      <module name="G-ESTATE" target="8" />
+      <module name="G-Parent" target="8" />
+      <module name="simple" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
