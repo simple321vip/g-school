@@ -1,15 +1,11 @@
 package com.g.estate.school.concurrent;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 public class SynchronizedClass {
 
-    Queue<String> queue = new LinkedList<>();
-
-    public static List list = new ArrayList();
+    public static List<String> list = new ArrayList<>();
 
     /**
      * 锁这个地方没有什么好说的，函数锁和对象锁，重要的还是死锁问题
@@ -54,7 +50,6 @@ public class SynchronizedClass {
             }
         }
 
-        SynchronizedClass synchronizedClass = new SynchronizedClass();
         // this 锁 也是对象锁 ，下面方法中thread2的addTask方法永远不会执行，因为在线程1中已经对synchronizedClass获取了锁的状态
 //        Thread thread1 = new Thread() {
 //            @Override
@@ -73,42 +68,20 @@ public class SynchronizedClass {
 //        thread2.start();
 
         // 类锁，会锁住该类的所有对象, 在线程3里对SynchronizedClass类加了锁，导致，在线程4里，一直获取锁失败。
-        Thread thread3 = new Thread() {
-            @Override
-            public void run() {
-                SynchronizedClass.getItem();
-            }
-        };
+        Thread thread3 = new Thread(SynchronizedClass::getItem);
         thread3.start();
 
-        Thread thread4 = new Thread() {
-            @Override
-            public void run() {
-                SynchronizedClass.add();
-            }
-        };
+        Thread thread4 = new Thread(() -> SynchronizedClass.add());
         thread4.start();
 
 
     }
 
-    public synchronized void addTask(String s) {
-        this.queue.add(s);
-    }
-
-    public synchronized String getTask() {
-        while (queue.isEmpty()) {
-
-        }
-        return queue.remove();
-    }
-
-    public static synchronized Object getItem() {
+    public static synchronized void getItem() {
 
         while (list.isEmpty()) {
 
         }
-        return list.get(0);
     }
 
     public static synchronized void add() {

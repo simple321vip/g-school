@@ -2,9 +2,7 @@ package com.g.estate.school.transaction;
 
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.transaction.annotation.Transactional;
-import sun.misc.Unsafe;
 
-import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
 
 public class SpringTranClass1 {

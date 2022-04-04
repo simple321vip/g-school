@@ -12,9 +12,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="G-ESTATE" target="8" />
-      <module name="G-Parent" target="8" />
-      <module name="simple" target="8" />
+      <module name="G-ESTATE" target="1.8" />
+      <module name="G-Parent" target="1.8" />
+      <module name="simple" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
