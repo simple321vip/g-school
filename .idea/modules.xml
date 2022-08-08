@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../G-ESTATE/G-ESTATE.iml" filepath="$PROJECT_DIR$/../G-ESTATE/G-ESTATE.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../g-parent/G-Parent.iml" filepath="$PROJECT_DIR$/../g-parent/G-Parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/simple.iml" filepath="$PROJECT_DIR$/simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/violin-school.iml" filepath="$PROJECT_DIR$/violin-school.iml" />
     </modules>
   </component>
 </project>
