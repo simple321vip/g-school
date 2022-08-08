@@ -34,7 +34,6 @@ public class Class_wait_notify_notifyAll extends Object {
      */
     public static void test_1(Class_wait_notify_notifyAll object) {
 
-
         System.out.println("--------test_1 start----------");
         try {
             object.wait();
@@ -43,16 +42,32 @@ public class Class_wait_notify_notifyAll extends Object {
         }
         System.out.println("------------------");
         try {
-            synchronized (object) {
-                object.wait();
+            synchronized (object) {      // monitorenter
+                object.wait();           // monitorexit
             }
-        } catch (Exception e) {
+        } catch (Exception e) {          // monitorexit
             e.printStackTrace();
         }
         System.out.println("--------test_1 end----------");
-
-
     }
 
+    /**
+     * Causes the currently executing thread to sleep (temporarily cease
+     * execution) for the specified number of milliseconds, subject to
+     * the precision and accuracy of system timers and schedulers. The thread
+     * does not lose ownership of any monitors.
+     */
+    public static void test2() {
+        Thread thread = new Thread(() -> {
+            System.out.println("test sleep method");
+        });
+        thread.start();
+        try {
+            Thread.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
 
 }
