@@ -19,6 +19,7 @@ public class Class_wait_notify_notifyAll extends Object {
         Class_wait_notify_notifyAll object1 = new Class_wait_notify_notifyAll();
 
         test_1(object1);
+        test2(object1);
 
 
     }
@@ -57,16 +58,18 @@ public class Class_wait_notify_notifyAll extends Object {
      * the precision and accuracy of system timers and schedulers. The thread
      * does not lose ownership of any monitors.
      */
-    public static void test2() {
+    public static void test2(Class_wait_notify_notifyAll object) {
         Thread thread = new Thread(() -> {
             System.out.println("test sleep method");
+            synchronized (object) {
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
         });
         thread.start();
-        try {
-            Thread.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
 
     }
 
