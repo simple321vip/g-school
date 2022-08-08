@@ -14,7 +14,7 @@ package cn.violin.home.school.school.concurrent;
  */
 public class Class_wait_notify_notifyAll extends Object {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
 
         Class_wait_notify_notifyAll object1 = new Class_wait_notify_notifyAll();
 
@@ -59,17 +59,14 @@ public class Class_wait_notify_notifyAll extends Object {
      * does not lose ownership of any monitors.
      */
     public static void test2(Class_wait_notify_notifyAll object) {
-        Thread thread = new Thread(() -> {
-            System.out.println("test sleep method");
-            synchronized (object) {
-                try {
-                    Thread.sleep(1);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
+
+        synchronized (object) { // monitorenter
+            try {
+                Thread.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace(); // monitorexit
             }
-        });
-        thread.start();
+        }
 
     }
 
