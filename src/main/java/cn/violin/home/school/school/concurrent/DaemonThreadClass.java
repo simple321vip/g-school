@@ -1,6 +1,18 @@
 package cn.violin.home.school.school.concurrent;
 
-public class ThreadClass {
+/**
+ * 线程的生命周期，New， 就绪runnable， 运行running， 阻塞Blocked， 死亡dead 5种状态。
+ * 新建一个线程对象
+ * start 方法 使 线程处于就绪状态
+ * 运行状态
+ * Blocked has three kinds
+ * wait Blocked 状态，调用对象的wait状态 会让出锁，而自身进入 wait set状态
+ * synchronized Blocked 状态，
+ * other Blocked 状态，调用线程的join或者sleep方法，线程也会进入 休眠状态
+ * 正常结束或者异常退出
+ *
+ */
+public class DaemonThreadClass {
 
     /**
      * 守护线程 ，其他线程结束后，守护线程就会自动结束，所以守护线程不适合读写资源，因为很容易造成数据丢失，
