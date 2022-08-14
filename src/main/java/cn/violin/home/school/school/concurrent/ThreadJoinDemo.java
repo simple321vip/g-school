@@ -6,6 +6,7 @@ package cn.violin.home.school.school.concurrent;
  *
  * join will lose sync
  * sleep will not lose sync
+ * 所以说 线程A 和 B ，在线程A中 调用 B.join()方法，会导致线程A进入等待，不影响B的执行
  *
  *
  */
@@ -13,7 +14,6 @@ public class ThreadJoinDemo {
 
 
     public static void main(String[] args) {
-        ThreadJoinDemo threadJoinDemo = new ThreadJoinDemo();
         Thread thread1 = new Thread(() -> {
             while (true) {
                 try {
@@ -28,11 +28,14 @@ public class ThreadJoinDemo {
 
 
         try {
+            System.out.println("22222222");
             Thread.sleep(3000);
+            System.out.println("333333");
             thread1.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+        System.out.println("444444444444");
 //        synchronized (thread1) {
 //            thread1.notify();
 //        }

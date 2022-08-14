@@ -1,7 +1,8 @@
 package cn.violin.home.school.school.concurrent;
 
 /**
- * 线程的生命周期，New， 就绪runnable， 运行running， 阻塞Blocked， 死亡dead 5种状态。
+ * 线程的状态 NEW， RUNNABLE， BLOCKED， WAITING， TIMED_WAITING， TERMINATED
+ * 线程的生命周期， NEW， RUNNABLE ， Running ，Blocked， DEAD
  * 新建一个线程对象
  * start 方法 使 线程处于就绪状态
  * 运行状态
